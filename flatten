@@ -1,0 +1,44 @@
+def flatten(x): 
+    output=[]
+    for m in x:
+        #print(m)
+        if type(m)==list:
+            for n in m:
+                if type(n)==list:
+                    for l in n:
+                        if type(l)==list:
+                            for o in l:
+                                output.append(o)
+                
+                        elif type(l)==int:
+                            output.append(l)
+                            #print(m)
+                        elif type(l)==str:
+                            output.append(l)
+                elif type(n)==int:
+                    output.append(n)
+                    #print(m)
+                elif type(n)==str:
+                    output.append(n)
+                
+            
+        elif type(m)==int:
+            output.append(m)
+            #print(m)
+        elif type(m)==str:
+            output.append(m)
+        
+        #else:
+            #for n in m:
+                #print(n)
+                #output.append(n)
+    print(output)
+    
+     
+
+
+
+
+k=[[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+
+flatten(k)
