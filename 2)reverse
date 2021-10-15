@@ -1,0 +1,14 @@
+def reverse1(i): 
+    output=[]    
+    for x in i:
+        y=x
+        y.reverse()
+        output.append(y)
+        
+    output.reverse()
+    print(output)
+
+
+input1=[[1, 2], [3, 4], [5, 6, 7]]
+
+reverse1(input1)
